@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Vue.js Events</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="row mt-5">
+        <div class="col-4 offset-4">
+          <h3 class="text-center">Event</h3>
+          <!-- <input type="text" class="form-control" /> -->
+          <!-- <input
+            @input="fullName"
+            type="text"
+            class="form-control"
+            :value="fullName"
+          /> -->
+          <input v-model="fullName" class="form-control" :value="fullName" />
+          {{ fullName }}
+          <br />
+          <button class="btn btn-primary btn-sm">Ekle</button>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

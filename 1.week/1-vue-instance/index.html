@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS Bootcamp</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ title }}</h1>
+      <p>{{ content }}</p>
+      <a :target="eduflow.target" v-bind:href="eduflow.url" :tolga="owner"
+        >{{eduflow.title}}</a
+      >
+      <br />
+      <br />
+      <button v-on:click="changeTitle('bu 1. button')">Title degistir</button>
+      <button v-on:click="changeTitle('bu 2. button')">Title 2 degistir</button>
+      <div
+        class="box"
+        @mousemove="updateCoords"
+        @click="changeTitle('box uzerinden gelen')"
+      ></div>
+      <span>{{ coords.x }}, {{ coords.y }}</span>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

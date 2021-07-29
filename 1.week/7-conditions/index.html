@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 offset-2 p-2">
+            <button class="btn btn-sm btn-primary" @click="showContainer = !showContainer">Ac/kapat</button>
+            <h1 class="text-danger" v-if="!showContainer">baslangicta gozukecek</h1>
+            <h1 class="text-primary" v-else>sonra gozukecek</h1>
+            <hr />
+            <h3 :class="counterBoxClass">{{ counter }}</h3>
+            <button class="btn btn-sm btn-success mr-2" @click="counter++">Artir</button>
+            <button class="btn btn-sm btn-danger" @click="counter--">Azalt</button>
+            <p v-if="counter < 0">Counter Negatif</p>
+            <p v-else-if="counter > 0">Counter Pozitif</p>
+            <p v-else>Counter 0</p>
+
+            <hr />
+
+            <p v-show="counter < 0">Counter Negatif</p>
+            <p v-show="counter > 0">Counter Pozitif</p>
+            <p v-show="counter === 0">Counter 0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

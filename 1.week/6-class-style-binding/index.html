@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js class style binding</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="bgColor" />
+      <button @click="showBorder = !showBorder">Border ekle/kaldir</button>
+      <button @click="redBG = !redBG">RedBG ekle/kaldir</button>
+      <!-- <div class="box" :class="boxClass"></div> -->
+      <!-- <div class="box" :class="{border : showBorder, red : redBG}"></div> -->
+      <div
+        class="box"
+        :style="{backgroundColor : bgColor}"
+        :class="boxClasses"
+      ></div>
+      <!-- <div class="box" :class="['border', 'red']"></div> -->
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
