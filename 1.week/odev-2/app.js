@@ -7,7 +7,7 @@ const app = Vue.createApp({
   },
   methods: {
     showAlert() {
-      alert("魔鬼浪");
+      alert("魔鬼狼");
     },
   },
 }).mount("#exercise");
