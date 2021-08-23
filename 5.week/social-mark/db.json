@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "username": "moguilang",
+      "fullname": "muzaffer tolga yakar",
+      "password": "a6e2f0577f7a1b3ad6eb0003cb2d6f91afea2ae8",
+      "id": 1
+    },
+    {
+      "username": "ahmtgnr",
+      "fullname": "ahmet guner",
+      "password": "a6e2f0577f7a1b3ad6eb0003cb2d6f91afea2ae8",
+      "id": 2
+    }
+  ],
+  "bookmarks": [],
+  "categories": []
+}
